@@ -1,0 +1,66 @@
+Creating a Node.js application involves several steps, from setting up your development environment to writing code and running your application. Here's a step-by-step guide on how to create a basic Node.js app:
+
+
+Step 1: Install Node.js
+
+    If you haven't already, you need to install Node.js on your computer. You can download the installer from the official Node.js website (https://nodejs.org/). Download the LTS (Long-Term Support) version for stability.
+
+Step 2: Create a Project Directory
+
+    Create a new directory for your Node.js project. You can do this using your computer's file explorer or by using the command line. Open a terminal and navigate to the directory where you want to create your project:
+
+        mkdir my-node-app
+        cd my-node-app
+
+Step 3: Initialize a Node.js Project
+
+    Inside your project directory, you need to initialize a Node.js project. This is done using the npm init command. It will prompt you to provide information about your project (you can press Enter to accept the default values):
+
+        npm init
+
+Step 4: Create Your Application File
+
+    Create the main JavaScript file for your Node.js application. Typically, this file is named index.js, but you can choose any name you like. You can create it using a text editor or use the command line:
+
+        vi index.js
+
+Step 5: Write Your Node.js Application
+
+    Open index.js in your text editor and start writing your Node.js code.
+
+Step 6: Install Dependencies (Optional)
+
+    Open a terminal and navigate to the project's root directory: 
+
+        For example: E:\Vishnu\code_task\Tutorial\my-node-app\.
+
+    Install project dependencies by running the following command:
+
+        npm install
+
+    If your project requires any external packages or libraries, you can install them using npm. For example, to install the Express.js framework, you would run:
+
+        npm install express --save
+
+Step 7: Run Your Node.js Application
+
+    To run your Node.js application, open your terminal, navigate to your project directory, and run:
+
+        node index.js
+
+    Your server should start, and you can access it by opening a web browser and navigating to http://localhost:3000 (or whichever port you specified in your code).
+
+Step 8: Development and Testing
+
+    You can now continue developing your Node.js application, adding routes, middleware, and more as needed. You can also use tools like Nodemon for automatic server restarts during development:
+
+        npm install nodemon --save-dev
+
+    This setup will automatically restart your server whenever you make changes to your code.
+
+    Start the application using either of the following commands:
+
+    For development with automatic server restarts:
+
+        npm run dev
+        npm start
