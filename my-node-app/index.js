@@ -2,6 +2,11 @@
 const express = require('express');
 // Create an Express application instance
 const app = express();
+const morgan = require('morgan');
+const { logger, errorLogger } = require('./app/logs/loggers');
+
+// Use Morgan middleware for logging HTTP requests
+app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) } }));
 
 // Middleware to parse requests with content-type: application/json
 app.use(express.json());
@@ -22,6 +27,7 @@ app.use((err, req, res, next) => {
 
     // Log the error message and stack trace to the console
     console.error(err.message, err.stack);
+    errorLogger.error(`Error handler middleware: ${err.message}`);
 
     // Send a JSON response with the error message and the determined status code
     res.status(statusCode).json({ message: err.message });
