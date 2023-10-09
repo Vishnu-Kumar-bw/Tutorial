@@ -20,6 +20,8 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to NewProData web application." });
 });
 
+require("./app/routes/invoice.route")(app);
+
 /* Error handler middleware */
 app.use((err, req, res, next) => {
     // Determine the HTTP status code from the error object or use 500 (Internal Server Error)
