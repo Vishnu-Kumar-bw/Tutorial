@@ -1,0 +1,58 @@
+To test your API using Postman, you can send HTTP requests to the endpoints you've defined in your code. 
+Below, I'll provide sample requests for each of the functions you've implemented along with example data.
+
+1. **GET - Retrieve All Invoices**
+
+   - **Method**: GET
+   - **URL**: `http://localhost:3000/invoices` (if your server is running locally on port 3000)
+
+2. **GET - Retrieve a Single Invoice by ID**
+
+   - **Method**: GET
+   - **URL**: `http://localhost:3000/invoices/:id`
+   - Replace `:id` with the ID of the invoice you want to retrieve.
+
+3. **POST - Create a New Invoice**
+
+   - **Method**: POST
+   - **URL**: `http://localhost:3000/invoices`
+   - **Headers**: Content-Type: application/json
+   - **Body** (example JSON data):
+
+   ```json
+   {
+       "customer_id": 3,
+       "date": "2023-11-03",
+       "due_date": "2023-11-10",
+       "terms": "NET30",
+       "total_amount": 100.00
+   }
+   ```
+
+4. **PUT - Update an Existing Invoice**
+
+   - **Method**: PUT
+   - **URL**: `http://localhost:3000/invoices/:id`
+   - Replace `:id` with the ID of the invoice you want to update.
+   - **Headers**: Content-Type: application/json
+   - **Body** (example JSON data):
+
+   ```json
+   {
+       "customer_id": 3,
+       "date": "2023-11-03",
+       "due_date": "2023-11-15",
+       "terms": "NET45",
+       "total_amount": 150.00
+   }
+   ```
+
+5. **DELETE - Delete an Invoice**
+
+   - **Method**: DELETE
+   - **URL**: `http://localhost:3000/invoices/:id`
+   - Replace `:id` with the ID of the invoice you want to delete.
+
+Make sure your Node.js server is running on the specified port (3000) or the one you configured. 
+You should be able to test your API using Postman with these sample requests and data. 
+Adjust the URLs and data as needed to match your specific use case.

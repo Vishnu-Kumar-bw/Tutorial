@@ -5,5 +5,13 @@ module.exports = app => {
 
     router.get("/", invoice.findAll);
 
+    router.get("/:id", invoice.findOne);
+
+    router.post("/", invoice.create);
+
+    router.put("/:id", invoice.update);
+
+    router.delete("/:id", invoice.delete);
+
     app.use('/invoices', router);
 };
